@@ -33,6 +33,7 @@ public class MessageReceivedListener extends ListenerAdapter {
         try { saveMessage(message); }
         catch (SQLException e) { throw new RuntimeException(e); }
 
+        /* Status on ping */
         if (message.getContentRaw().contains("<@"+selfUser.getId()+">")) {
             if (message.getAuthor().isBot()) return;
 
