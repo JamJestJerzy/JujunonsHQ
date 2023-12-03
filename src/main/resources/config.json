@@ -1,0 +1,14 @@
+{
+	"token": "",
+
+	"footer-icon-url":  "",
+
+	"sql-ip": "",
+	"sql-port": "",
+	"sql-database": "",
+	"sql-user": "",
+	"sql-password": "",
+	"sql-encrypt": "",
+	"sql-trust-server-certificate": "",
+	"sql-login-timeout": ""
+}

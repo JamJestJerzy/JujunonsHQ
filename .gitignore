@@ -42,4 +42,8 @@ bin/
 .DS_Store
 
 ### Sensitive data ###
-config.json
+# Ignore config.json in the root directory
+/config.json
+
+# Exclude src/main/resources/config.json
+!src/main/resources/config.json
