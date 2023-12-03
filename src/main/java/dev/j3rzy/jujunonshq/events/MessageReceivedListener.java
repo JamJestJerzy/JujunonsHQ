@@ -25,9 +25,12 @@ import static dev.j3rzy.jujunonshq.utils.SQLUtils.saveMessage;
 public class MessageReceivedListener extends ListenerAdapter {
     @Override
     public void onMessageReceived(@NotNull MessageReceivedEvent event) {
-        SelfUser selfUser = event.getJDA().getSelfUser();
         Message message = event.getMessage();
         User author = message.getAuthor();
+
+        if (author.isBot()) return; // Avoids logging bots messages
+
+        SelfUser selfUser = event.getJDA().getSelfUser();
         User dash1e = event.getJDA().getUserById("719890634294427669");
 
         try { saveMessage(message); }

@@ -1,5 +1,6 @@
 package dev.j3rzy.jujunonshq.utils;
 
+import dev.j3rzy.jujunonshq.objects.CMessage;
 import net.dv8tion.jda.api.entities.Message;
 
 import java.io.IOException;
@@ -92,5 +93,31 @@ public class SQLUtils {
 
         // Execute the prepared statement
         pre.executeUpdate();
+    }
+
+    public static CMessage getMessage(String messageId) throws SQLException {
+        String sql = "select * from messages where messageId like ?";
+        PreparedStatement pre = getConnection().prepareStatement(sql);
+        pre.setString(1, messageId);
+
+        ResultSet rs = pre.executeQuery();
+
+        String guildId = null;
+        String channelId = null;
+        String authorId = null;
+        String content = null;
+        String modifiedContent = null;
+        String attachments = null;
+
+        while (rs.next()) {
+            guildId = rs.getString("guildId");
+            channelId = rs.getString("channelId");
+            authorId = rs.getString("authorId");
+            content = rs.getString("content");
+            modifiedContent = rs.getString("modifiedContent");
+            attachments = rs.getString("attachments");
+        }
+
+        return new CMessage(guildId, channelId, messageId, authorId, content, modifiedContent, attachments);
     }
 }
