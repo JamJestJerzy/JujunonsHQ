@@ -1,0 +1,54 @@
+buildscript {
+    repositories {
+        gradlePluginPortal()
+    }
+    dependencies {
+        classpath 'com.github.johnrengelman:shadow:8.1.1'
+    }
+}
+
+plugins {
+    id 'java'
+    id 'application'
+    id 'com.github.johnrengelman.shadow' version '8.1.1'
+}
+
+apply plugin: 'com.github.johnrengelman.shadow'
+apply plugin: 'java'
+
+group = 'dev.j3rzy'
+version = '0.0.1'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation platform('org.junit:junit-bom:5.9.1')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+
+    implementation("net.dv8tion:JDA:5.0.0-beta.18")
+    implementation("org.slf4j:slf4j-simple:2.0.7")
+    implementation 'com.googlecode.json-simple:json-simple:1.1.1'
+    implementation files('mssql-jdbc-12.4.2.jre11.jar')
+}
+
+test {
+    useJUnitPlatform()
+}
+
+ext {
+    javaMainClass = 'dev.j3rzy.jujunonshq.Main'
+}
+
+application {
+    mainClassName = javaMainClass
+}
+
+jar {
+    manifest {
+        attributes(
+                'Main-Class': "$javaMainClass"
+        )
+    }
+}
