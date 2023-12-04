@@ -44,13 +44,7 @@ public class MessageReceivedListener extends ListenerAdapter {
 
             log.info(author.getName() + " pinged bot");
 
-            String iconUrl = null;
-            try {
-                String fromJSON = JSONUtils.getString("footer-icon-url");
-                iconUrl = (fromJSON.isEmpty() ? (dash1e == null ? "https://j3rzy.dev/images/fluttershy.png" : dash1e.getAvatarUrl()) : fromJSON);
-            } catch (IOException e) {
-                throw new RuntimeException(e);
-            }
+            String iconUrl = "https://j3rzy.dev/images/Java.png";
 
             EmbedBuilder emb = new EmbedBuilder()
                 .setTitle("Welcome!")
@@ -62,8 +56,8 @@ public class MessageReceivedListener extends ListenerAdapter {
                         + "**JRE Version: **" + System.getProperty("java.version") + '\n'
                         + "[Source Code](https://github.com/JamJestJerzy/JujunonsHQ)"
                 )
-                .setFooter("in Java, by dash1e", iconUrl)
-                .setColor(new Color(252, 244, 164));
+                .setFooter("by Jerzy (dash1e)", iconUrl)
+                .setColor(new Color(66, 117, 149));
 
             message.reply("").setEmbeds(emb.build()).mentionRepliedUser(false).queue();
         }
