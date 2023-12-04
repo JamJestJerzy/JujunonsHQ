@@ -1,10 +1,7 @@
 package dev.j3rzy.jujunonshq;
 
 import dev.j3rzy.jujunonshq.commands.CreateEmbedCommand;
-import dev.j3rzy.jujunonshq.events.MessageDeleteListener;
-import dev.j3rzy.jujunonshq.events.MessageReceivedListener;
-import dev.j3rzy.jujunonshq.events.ReadyListener;
-import dev.j3rzy.jujunonshq.events.SlashCommandInteractionListener;
+import dev.j3rzy.jujunonshq.events.*;
 import dev.j3rzy.jujunonshq.utils.JSONUtils;
 import net.dv8tion.jda.api.JDA;
 import net.dv8tion.jda.api.JDABuilder;
@@ -38,6 +35,7 @@ public class JujunonsHQ {
         builder.addEventListeners(new MessageDeleteListener());
         builder.addEventListeners(new MessageReceivedListener());
         builder.addEventListeners(new SlashCommandInteractionListener());
+        builder.addEventListeners(new MessageReactionAddListener());
         /* -------- [ Event Listeners ] -------- */
 
         /* -------- [ Event Listeners for Commands ] -------- */

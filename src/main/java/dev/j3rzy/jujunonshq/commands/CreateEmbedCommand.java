@@ -9,7 +9,10 @@ import net.dv8tion.jda.api.hooks.ListenerAdapter;
 import org.jetbrains.annotations.NotNull;
 
 import java.awt.*;
+import java.util.Objects;
 import java.util.concurrent.TimeUnit;
+
+import static dev.j3rzy.jujunonshq.utils.ConsoleUtils.log;
 
 public class CreateEmbedCommand extends ListenerAdapter {
     @Override
