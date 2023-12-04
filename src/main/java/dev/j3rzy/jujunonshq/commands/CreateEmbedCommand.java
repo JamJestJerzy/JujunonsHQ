@@ -25,9 +25,7 @@ public class CreateEmbedCommand extends ListenerAdapter {
         } catch (JsonParseException | IllegalStateException e) {
             String error = e.getMessage().replaceFirst("^.*: U", "U").replaceFirst(".at.*$", "");
             MessageEmbed emb = new EmbedBuilder().setColor(Color.RED).setTitle(error).build();
-            event.getHook().sendMessage("").addEmbeds(emb).queue((message) -> {
-                message.delete().queueAfter(10, TimeUnit.SECONDS);
-            });
+            event.getHook().sendMessage("").setEphemeral(true).addEmbeds(emb).queue();
         }
     }
 }

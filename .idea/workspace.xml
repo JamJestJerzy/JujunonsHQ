@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d4329fd7-acf7-4432-971e-04e4c2b81b03" name="Changes" comment="" />
+    <list default="true" id="d4329fd7-acf7-4432-971e-04e4c2b81b03" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/j3rzy/jujunonshq/JujunonsHQ.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/j3rzy/jujunonshq/JujunonsHQ.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/j3rzy/jujunonshq/commands/CreateEmbedCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/j3rzy/jujunonshq/commands/CreateEmbedCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/j3rzy/jujunonshq/utils/SQLUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/j3rzy/jujunonshq/utils/SQLUtils.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -92,7 +97,7 @@
       <recent name="C:\Users\JamJestJerzyk\IdeaProjects\JujunonsHQ\src\main\resources\json" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.JujunonsHQ [shadowJar]">
+  <component name="RunManager" selected="Gradle.JujunonsHQ [run]">
     <configuration name="JujunonsHQ [run]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -139,8 +144,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.JujunonsHQ [shadowJar]" />
         <item itemvalue="Gradle.JujunonsHQ [run]" />
+        <item itemvalue="Gradle.JujunonsHQ [shadowJar]" />
       </list>
     </recent_temporary>
   </component>
@@ -155,7 +160,7 @@
       <workItem from="1701602983262" duration="1010000" />
       <workItem from="1701604005218" duration="7735000" />
       <workItem from="1701612707168" duration="18817000" />
-      <workItem from="1701707167035" duration="4601000" />
+      <workItem from="1701707167035" duration="6614000" />
     </task>
     <servers />
   </component>

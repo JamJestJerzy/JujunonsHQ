@@ -12,7 +12,11 @@ import net.dv8tion.jda.api.interactions.commands.OptionType;
 import net.dv8tion.jda.api.interactions.commands.build.Commands;
 import net.dv8tion.jda.api.requests.GatewayIntent;
 
+import java.sql.SQLException;
 import java.util.Objects;
+
+import static dev.j3rzy.jujunonshq.utils.ConsoleUtils.log;
+import static dev.j3rzy.jujunonshq.utils.SQLUtils.checkForTables;
 
 public class JujunonsHQ {
     public static JDA jda;
@@ -44,5 +48,12 @@ public class JujunonsHQ {
                 .addOption(OptionType.STRING, "json", "JSON to make embed of", true)
         ).queue();
         /* -------- [ Commands ] -------- */
+
+
+        try {
+            checkForTables();
+        } catch (SQLException e) {
+            log.error(e.getMessage());
+        }
     }
 }

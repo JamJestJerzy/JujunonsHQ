@@ -120,4 +120,26 @@ public class SQLUtils {
 
         return new CMessage(guildId, channelId, messageId, authorId, content, modifiedContent, attachments);
     }
+
+    public static void checkForTables() throws SQLException {
+        DatabaseMetaData dbm = getConnection().getMetaData();
+        ResultSet tables = dbm.getTables(null, null, "messages", null);
+        /* Table doesn't exists. */
+        if (!tables.next()) {
+            PreparedStatement pre = getConnection().prepareStatement("""
+                create table messages (
+                  id int identity(1,1) primary key,
+                  guildId varchar(32) not null,
+                  channelId varchar(32) not null,
+                  messageId varchar(32) unique not null,
+                  authorId varchar(32) not null,
+                  content varchar(max),
+                  modifiedContent varchar(max),
+                  attachments varchar(max)
+                )
+                """);
+            pre.executeQuery();
+            log.info("Created table \"messages\" in selected database.");
+        }
+    }
 }
