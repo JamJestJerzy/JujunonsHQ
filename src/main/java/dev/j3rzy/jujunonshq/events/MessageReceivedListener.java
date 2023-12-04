@@ -52,7 +52,7 @@ public class MessageReceivedListener extends ListenerAdapter {
                         "**Ping: **" + event.getJDA().getGatewayPing() + "ms" + '\n'
                         + "**Uptime: **" + getUptime() + '\n'
                         + "**RAM Usage: **" + getMemoryUsage() + '\n'
-                        + "**JDA Version: **" + getPackageVersion(JDA.class) + '\n'
+                        + "**JDA Version: **" + (getPackageVersion(JDA.class) != null ? getPackageVersion(JDA.class) : "5.0.0-beta.18") + '\n'
                         + "**JRE Version: **" + System.getProperty("java.version") + '\n'
                         + "[Source Code](https://github.com/JamJestJerzy/JujunonsHQ)"
                 )
