@@ -14,7 +14,7 @@ import net.dv8tion.jda.api.requests.GatewayIntent;
 
 import java.util.Objects;
 
-public class Main {
+public class JujunonsHQ {
     public static JDA jda;
 
     public static void main(String[] args) throws Exception {

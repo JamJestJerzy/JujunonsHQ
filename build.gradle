@@ -39,7 +39,7 @@ test {
 }
 
 ext {
-    javaMainClass = 'dev.j3rzy.jujunonshq.Main'
+    javaMainClass = 'dev.j3rzy.jujunonshq.JujunonsHQ'
 }
 
 application {

@@ -59,7 +59,8 @@ public class MessageReceivedListener extends ListenerAdapter {
                         + "**Uptime: **" + getUptime() + '\n'
                         + "**RAM Usage: **" + getMemoryUsage() + '\n'
                         + "**JDA Version: **" + getPackageVersion(JDA.class) + '\n'
-                        + "**JRE Version: **" + System.getProperty("java.version")
+                        + "**JRE Version: **" + System.getProperty("java.version") + '\n'
+                        + "[Source Code](https://github.com/JamJestJerzy/JujunonsHQ)"
                 )
                 .setFooter("in Java, by dash1e", iconUrl)
                 .setColor(new Color(252, 244, 164));

@@ -1,12 +1,11 @@
 package dev.j3rzy.jujunonshq.objects;
 
-import dev.j3rzy.jujunonshq.Main;
+import dev.j3rzy.jujunonshq.JujunonsHQ;
 import net.dv8tion.jda.api.JDA;
 import net.dv8tion.jda.api.entities.Guild;
 import net.dv8tion.jda.api.entities.User;
 import net.dv8tion.jda.api.entities.channel.concrete.TextChannel;
 
-import java.nio.channels.Channel;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -22,7 +21,7 @@ public class CMessage {
     private final List<String> attachments = new ArrayList<>();
 
     public CMessage(String guildId, String channelId, String messageId, String authorId, String content, String modifiedContent, String attachments) {
-        jda = Main.jda;
+        jda = JujunonsHQ.jda;
 
         this.guildId = guildId;
         this.channelId = channelId;
