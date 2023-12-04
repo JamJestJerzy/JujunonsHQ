@@ -8,6 +8,7 @@ import dev.j3rzy.jujunonshq.events.SlashCommandInteractionListener;
 import dev.j3rzy.jujunonshq.utils.JSONUtils;
 import net.dv8tion.jda.api.JDA;
 import net.dv8tion.jda.api.JDABuilder;
+import net.dv8tion.jda.api.OnlineStatus;
 import net.dv8tion.jda.api.entities.Activity;
 import net.dv8tion.jda.api.interactions.commands.OptionType;
 import net.dv8tion.jda.api.interactions.commands.build.Commands;
@@ -28,6 +29,7 @@ public class JujunonsHQ {
         }
 
         JDABuilder builder = JDABuilder.createDefault(JSONUtils.getString("token")); /* Builder itself */
+        builder.setStatus(OnlineStatus.IDLE);
         builder.setActivity(Activity.listening("Koa <3")); /* Sets activity */
         for (GatewayIntent gatewayIntent : GatewayIntent.values()) builder.enableIntents(gatewayIntent); /* Enable every possible intent */
 

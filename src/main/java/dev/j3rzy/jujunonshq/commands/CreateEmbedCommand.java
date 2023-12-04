@@ -22,10 +22,12 @@ public class CreateEmbedCommand extends ListenerAdapter {
         try {
             MessageEmbed emb = JSONUtils.getEmbedFromJSON(event.getOption("json").getAsString());
             event.getHook().sendMessage("").addEmbeds(emb).queue();
-        } catch (JsonParseException | IllegalStateException e) {
-            String error = e.getMessage().replaceFirst("^.*: U", "U").replaceFirst(".at.*$", "");
+        } catch (JsonParseException | IllegalStateException | NumberFormatException e) {
+            String error = e.getMessage()/*.replaceFirst("^.*: U", "U")*/.replaceFirst(".at.*$", "");
             MessageEmbed emb = new EmbedBuilder().setColor(Color.RED).setTitle(error).build();
-            event.getHook().sendMessage("").setEphemeral(true).addEmbeds(emb).queue();
+            event.getHook().sendMessage("").addEmbeds(emb).queue(message -> {
+                message.delete().queueAfter(10, TimeUnit.SECONDS);
+            });
         }
     }
 }
