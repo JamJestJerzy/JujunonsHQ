@@ -54,7 +54,7 @@ public class MessageReceivedListener extends ListenerAdapter {
                         + "**RAM Usage: **" + getMemoryUsage() + '\n'
                         + "**JDA Version: **" + (getPackageVersion(JDA.class) != null ? getPackageVersion(JDA.class) : "5.0.0-beta.18") + '\n'
                         + "**JRE Version: **" + System.getProperty("java.version") + '\n'
-                        + "[Source Code](https://github.com/JamJestJerzy/JujunonsHQ)"
+                        + "[Source Code (Java)](https://github.com/JamJestJerzy/JujunonsHQ)"
                 )
                 .setFooter("by Jerzy (dash1e)", iconUrl)
                 .setColor(new Color(66, 117, 149));
