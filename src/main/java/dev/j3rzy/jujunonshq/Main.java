@@ -32,6 +32,10 @@ public class Main {
         builder.addEventListeners(new MessageReceivedListener());
         /* -------- [ Event Listeners ] -------- */
 
+        /* -------- [ Event Listeners for Commands ] -------- */
+        builder.addEventListeners(new CreateEmbedCommand());
+        /* -------- [ Event Listeners for Commands ] -------- */
+
         jda = builder.build();
 
         /* -------- [ Commands ] -------- */
@@ -40,9 +44,5 @@ public class Main {
                 .addOption(OptionType.STRING, "json", "JSON to make embed of", true)
         ).queue();
         /* -------- [ Commands ] -------- */
-
-        /* -------- [ Event Listeners for Commands ] -------- */
-        jda.addEventListener(new CreateEmbedCommand());
-        /* -------- [ Event Listeners for Commands ] -------- */
     }
 }

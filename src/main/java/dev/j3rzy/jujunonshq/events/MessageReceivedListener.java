@@ -33,8 +33,10 @@ public class MessageReceivedListener extends ListenerAdapter {
         SelfUser selfUser = event.getJDA().getSelfUser();
         User dash1e = event.getJDA().getUserById("719890634294427669");
 
-        try { saveMessage(message); }
-        catch (SQLException e) { throw new RuntimeException(e); }
+        if (JSONUtils.getBoolean("log-messages")) {
+            try { saveMessage(message); }
+            catch (SQLException e) { log.error(e.getMessage()); }
+        }
 
         /* Status on ping */
         if (message.getContentRaw().contains("<@"+selfUser.getId()+">")) {

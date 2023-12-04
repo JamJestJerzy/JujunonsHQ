@@ -3,6 +3,7 @@
 
 	"footer-icon-url":  "",
 
+	"log-messages": false,
 	"sql-ip": "",
 	"sql-port": "",
 	"sql-database": "",

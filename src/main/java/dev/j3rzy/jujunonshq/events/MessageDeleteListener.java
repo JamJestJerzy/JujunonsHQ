@@ -16,12 +16,14 @@ import static dev.j3rzy.jujunonshq.utils.SQLUtils.getMessage;
 public class MessageDeleteListener extends ListenerAdapter {
     @Override
     public void onMessageDelete(@NotNull MessageDeleteEvent event) {
-        CMessage cMessage;
+        CMessage cMessage = null;
         try {
             cMessage = getMessage(event.getMessageId());
         } catch (SQLException e) {
-            throw new RuntimeException(e);
+            log.error(e.getMessage());
         }
+
+        if (cMessage == null) return;
 
         log.info(cMessage.getContent());
     }

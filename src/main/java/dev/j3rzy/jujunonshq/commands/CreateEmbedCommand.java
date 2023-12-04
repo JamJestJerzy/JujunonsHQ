@@ -1,13 +1,15 @@
 package dev.j3rzy.jujunonshq.commands;
 
-import com.google.gson.JsonObject;
-import com.google.gson.JsonParser;
-import com.google.gson.JsonSyntaxException;
+import com.google.gson.JsonParseException;
+import dev.j3rzy.jujunonshq.utils.JSONUtils;
+import net.dv8tion.jda.api.EmbedBuilder;
+import net.dv8tion.jda.api.entities.MessageEmbed;
 import net.dv8tion.jda.api.events.interaction.command.SlashCommandInteractionEvent;
 import net.dv8tion.jda.api.hooks.ListenerAdapter;
 import org.jetbrains.annotations.NotNull;
 
-import static dev.j3rzy.jujunonshq.utils.JSONUtils.jsonToEmbed;
+import java.awt.*;
+import java.util.concurrent.TimeUnit;
 
 public class CreateEmbedCommand extends ListenerAdapter {
     @Override
@@ -15,14 +17,17 @@ public class CreateEmbedCommand extends ListenerAdapter {
         if (!event.getName().equals("embed")) return;
         if (event.getOption("json") == null) return;
 
-        String jsonString = event.getOption("json").getAsString();
+        event.deferReply().queue();
 
         try {
-            JsonObject json = JsonParser.parseString(jsonString).getAsJsonObject();
-            event.reply("").addEmbeds(jsonToEmbed(json)).queue();
-        } catch (JsonSyntaxException | IllegalStateException e) {
-            event.reply("The provided input is not a valid JSON object.").queue();
+            MessageEmbed emb = JSONUtils.getEmbedFromJSON(event.getOption("json").getAsString());
+            event.getHook().sendMessage("").addEmbeds(emb).queue();
+        } catch (JsonParseException | IllegalStateException e) {
+            String error = e.getMessage().replaceFirst("^.*: U", "U").replaceFirst(".at.*$", "");
+            MessageEmbed emb = new EmbedBuilder().setColor(Color.RED).setTitle(error).build();
+            event.getHook().sendMessage("").addEmbeds(emb).queue((message) -> {
+                message.delete().queueAfter(10, TimeUnit.SECONDS);
+            });
         }
     }
 }
-
