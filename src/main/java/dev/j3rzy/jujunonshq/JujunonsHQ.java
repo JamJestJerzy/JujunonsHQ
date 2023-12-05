@@ -1,6 +1,5 @@
 package dev.j3rzy.jujunonshq;
 
-import dev.j3rzy.jujunonshq.commands.skyblock.MayorCommand;
 import dev.j3rzy.jujunonshq.commands.util.EmbedCommand;
 import dev.j3rzy.jujunonshq.events.*;
 import dev.j3rzy.jujunonshq.utils.JSONUtils;
@@ -41,7 +40,6 @@ public class JujunonsHQ {
 
         /* -------- [ Event Listeners for Commands ] -------- */
         builder.addEventListeners(new EmbedCommand());
-        builder.addEventListeners(new MayorCommand());
         /* -------- [ Event Listeners for Commands ] -------- */
 
         jda = builder.build();

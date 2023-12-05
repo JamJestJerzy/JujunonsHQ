@@ -71,4 +71,9 @@ public class JSONUtils {
         EmbedBuilder embedBuilder = EmbedBuilder.fromData(dataObject);
         return embedBuilder.build();
     }
+
+    public static JSONObject getJSONFromString(String jsonString) throws ParseException {
+        JSONParser parser = new JSONParser();
+        return (JSONObject) parser.parse(jsonString);
+    }
 }
