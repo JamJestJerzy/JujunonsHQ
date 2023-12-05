@@ -48,7 +48,6 @@ public class JujunonsHQ {
         jda.updateCommands().addCommands(
             Commands.slash("embed", "Creates embed from provided JSON")
                 .addOption(OptionType.STRING, "json", "JSON to make embed of", true),
-            Commands.slash("mayor", "Provides info about SkyBlock's mayor elections")
         ).queue();
         /* -------- [ Commands ] -------- */
 
