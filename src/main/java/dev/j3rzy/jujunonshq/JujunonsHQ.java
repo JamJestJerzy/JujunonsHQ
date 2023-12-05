@@ -1,5 +1,6 @@
 package dev.j3rzy.jujunonshq;
 
+import dev.j3rzy.jujunonshq.commands.skyblock.MayorCommand;
 import dev.j3rzy.jujunonshq.commands.util.EmbedCommand;
 import dev.j3rzy.jujunonshq.events.*;
 import dev.j3rzy.jujunonshq.utils.JSONUtils;
@@ -40,6 +41,7 @@ public class JujunonsHQ {
 
         /* -------- [ Event Listeners for Commands ] -------- */
         builder.addEventListeners(new EmbedCommand());
+        builder.addEventListeners(new MayorCommand());
         /* -------- [ Event Listeners for Commands ] -------- */
 
         jda = builder.build();
@@ -47,7 +49,8 @@ public class JujunonsHQ {
         /* -------- [ Commands ] -------- */
         jda.updateCommands().addCommands(
             Commands.slash("embed", "Creates embed from provided JSON")
-                .addOption(OptionType.STRING, "json", "JSON to make embed of", true)
+                .addOption(OptionType.STRING, "json", "JSON to make embed of", true),
+            Commands.slash("mayor", "Provides info about SkyBlock's mayor elections")
         ).queue();
         /* -------- [ Commands ] -------- */
 
