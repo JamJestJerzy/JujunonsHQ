@@ -1,6 +1,9 @@
 package dev.j3rzy.discord;
 
-import dev.j3rzy.discord.commands.util.EmbedCommand;
+import dev.j3rzy.discord.commands.SlashCommand;
+import dev.j3rzy.discord.commands.SlashCommandManager;
+import dev.j3rzy.discord.commands.SlashCommandOption;
+import dev.j3rzy.discord.commands.commands.util.EmbedCommand;
 import dev.j3rzy.discord.events.*;
 import dev.j3rzy.discord.utils.JSONUtils;
 import net.dv8tion.jda.api.JDA;
@@ -8,10 +11,14 @@ import net.dv8tion.jda.api.JDABuilder;
 import net.dv8tion.jda.api.OnlineStatus;
 import net.dv8tion.jda.api.entities.Activity;
 import net.dv8tion.jda.api.interactions.commands.OptionType;
+import net.dv8tion.jda.api.interactions.commands.build.CommandData;
 import net.dv8tion.jda.api.interactions.commands.build.Commands;
+import net.dv8tion.jda.api.interactions.commands.build.SlashCommandData;
 import net.dv8tion.jda.api.requests.GatewayIntent;
 
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.Collection;
 import java.util.Objects;
 
 import static dev.j3rzy.discord.utils.ConsoleUtils.log;
@@ -38,17 +45,20 @@ public class JujunonsHQ {
         builder.addEventListeners(new MessageReactionAddListener());
         /* -------- [ Event Listeners ] -------- */
 
-        /* -------- [ Event Listeners for Commands ] -------- */
-        builder.addEventListeners(new EmbedCommand());
-        /* -------- [ Event Listeners for Commands ] -------- */
-
         jda = builder.build();
 
         /* -------- [ Commands ] -------- */
-        jda.updateCommands().addCommands(
-            Commands.slash("embed", "Creates embed from provided JSON")
-                .addOption(OptionType.STRING, "json", "JSON to make embed of", true)
-        ).queue();
+        Collection<CommandData> commands = new ArrayList<>();
+        for (SlashCommand slashCommand : SlashCommandManager.INSTANCE.getCommands()) {
+            SlashCommandData command = Commands.slash(slashCommand.getName(), slashCommand.getDescription());
+            if (slashCommand.haveOptions()) {
+                for (SlashCommandOption option : slashCommand.getOptions()) {
+                    command.addOption(option.getType(), option.getName(), option.getDescription(), option.isRequired(), option.isAutoComplete());
+                }
+            }
+            commands.add(command);
+        }
+        jda.updateCommands().addCommands(commands).queue();
         /* -------- [ Commands ] -------- */
 
 
