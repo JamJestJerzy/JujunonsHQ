@@ -5,13 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2cb5ee1f-43cb-4c4d-928b-e9d004df2cf1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/dev/j3rzy/discord/commands/SlashCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dev/j3rzy/discord/commands/SlashCommandManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dev/j3rzy/discord/commands/SlashCommandOption.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dev/j3rzy/discord/commands/commands/HelpCommand.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dev/j3rzy/discord/JujunonsHQ.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/j3rzy/discord/JujunonsHQ.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dev/j3rzy/discord/commands/util/EmbedCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/j3rzy/discord/commands/commands/util/EmbedCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dev/j3rzy/discord/events/SlashCommandInteractionListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/j3rzy/discord/events/SlashCommandInteractionListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/j3rzy/discord/commands/SlashCommandManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/j3rzy/discord/commands/SlashCommandManager.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,6 +82,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="dev.j3rzy.discord.commands.commands" />
       <recent name="dev.j3rzy.discord.commands" />
       <recent name="dev.j3rzy.jujunonshq.commands" />
     </key>
