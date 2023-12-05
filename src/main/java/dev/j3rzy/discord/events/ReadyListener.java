@@ -1,4 +1,4 @@
-package dev.j3rzy.jujunonshq.events;
+package dev.j3rzy.discord.events;
 
 import net.dv8tion.jda.api.Permission;
 import net.dv8tion.jda.api.entities.SelfUser;
@@ -6,7 +6,7 @@ import net.dv8tion.jda.api.events.session.ReadyEvent;
 import net.dv8tion.jda.api.hooks.ListenerAdapter;
 import org.jetbrains.annotations.NotNull;
 
-import static dev.j3rzy.jujunonshq.utils.ConsoleUtils.log;
+import static dev.j3rzy.discord.utils.ConsoleUtils.log;
 
 public class ReadyListener extends ListenerAdapter {
     @Override

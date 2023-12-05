@@ -1,4 +1,4 @@
-package dev.j3rzy.jujunonshq.events;
+package dev.j3rzy.discord.events;
 
 import net.dv8tion.jda.api.entities.Message;
 import net.dv8tion.jda.api.entities.MessageReaction;

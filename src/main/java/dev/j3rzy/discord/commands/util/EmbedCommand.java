@@ -1,7 +1,7 @@
-package dev.j3rzy.jujunonshq.commands.util;
+package dev.j3rzy.discord.commands.util;
 
 import com.google.gson.JsonParseException;
-import dev.j3rzy.jujunonshq.utils.JSONUtils;
+import dev.j3rzy.discord.utils.JSONUtils;
 import net.dv8tion.jda.api.EmbedBuilder;
 import net.dv8tion.jda.api.entities.MessageEmbed;
 import net.dv8tion.jda.api.events.interaction.command.SlashCommandInteractionEvent;
@@ -11,7 +11,7 @@ import org.jetbrains.annotations.NotNull;
 import java.awt.*;
 import java.util.concurrent.TimeUnit;
 
-import static dev.j3rzy.jujunonshq.utils.ConsoleUtils.replaceLast;
+import static dev.j3rzy.discord.utils.ConsoleUtils.replaceLast;
 
 public class EmbedCommand extends ListenerAdapter {
     @Override

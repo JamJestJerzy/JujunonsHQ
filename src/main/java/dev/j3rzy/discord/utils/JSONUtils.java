@@ -1,4 +1,4 @@
-package dev.j3rzy.jujunonshq.utils;
+package dev.j3rzy.discord.utils;
 
 import net.dv8tion.jda.api.EmbedBuilder;
 import net.dv8tion.jda.api.entities.MessageEmbed;
@@ -9,7 +9,7 @@ import org.json.simple.parser.ParseException;
 
 import java.io.*;
 
-import static dev.j3rzy.jujunonshq.utils.ConsoleUtils.log;
+import static dev.j3rzy.discord.utils.ConsoleUtils.log;
 
 public class JSONUtils {
     private static String configFileName = "config.json";

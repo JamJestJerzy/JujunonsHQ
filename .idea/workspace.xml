@@ -5,8 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2cb5ee1f-43cb-4c4d-928b-e9d004df2cf1" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/j3rzy/jujunonshq/JujunonsHQ.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/j3rzy/discord/JujunonsHQ.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/j3rzy/jujunonshq/commands/util/EmbedCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/j3rzy/discord/commands/util/EmbedCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/j3rzy/jujunonshq/events/MessageDeleteListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/j3rzy/discord/events/MessageDeleteListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/j3rzy/jujunonshq/events/MessageReactionAddListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/j3rzy/discord/events/MessageReactionAddListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/j3rzy/jujunonshq/events/MessageReceivedListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/j3rzy/discord/events/MessageReceivedListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/j3rzy/jujunonshq/events/ReadyListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/j3rzy/discord/events/ReadyListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/j3rzy/jujunonshq/events/SlashCommandInteractionListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/j3rzy/discord/events/SlashCommandInteractionListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/j3rzy/jujunonshq/objects/CMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/j3rzy/discord/objects/CMessage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/j3rzy/jujunonshq/utils/ConsoleUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/j3rzy/discord/utils/ConsoleUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/j3rzy/jujunonshq/utils/HTTPUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/j3rzy/discord/utils/HTTPUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/j3rzy/jujunonshq/utils/JSONUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/j3rzy/discord/utils/JSONUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/j3rzy/jujunonshq/utils/MathUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/j3rzy/discord/utils/MathUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/j3rzy/jujunonshq/utils/SQLUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/j3rzy/discord/utils/SQLUtils.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,24 +75,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/JamJestJerzy/IdeaProjects/JujunonsHQ&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/Users/JamJestJerzy/IdeaProjects/JujunonsHQ",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.0",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="dev.j3rzy.jujunonshq.commands" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="JujunonsHQ [run]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>

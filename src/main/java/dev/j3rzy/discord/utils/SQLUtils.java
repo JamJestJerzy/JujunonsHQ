@@ -1,15 +1,12 @@
-package dev.j3rzy.jujunonshq.utils;
+package dev.j3rzy.discord.utils;
 
-import dev.j3rzy.jujunonshq.objects.CMessage;
+import dev.j3rzy.discord.objects.CMessage;
 import net.dv8tion.jda.api.entities.Message;
 
 import java.io.IOException;
 import java.sql.*;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
 
-import static dev.j3rzy.jujunonshq.utils.ConsoleUtils.log;
+import static dev.j3rzy.discord.utils.ConsoleUtils.log;
 
 public class SQLUtils {
     private static final String ip;

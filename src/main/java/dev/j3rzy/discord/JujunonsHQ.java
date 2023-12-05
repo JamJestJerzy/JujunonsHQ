@@ -1,8 +1,8 @@
-package dev.j3rzy.jujunonshq;
+package dev.j3rzy.discord;
 
-import dev.j3rzy.jujunonshq.commands.util.EmbedCommand;
-import dev.j3rzy.jujunonshq.events.*;
-import dev.j3rzy.jujunonshq.utils.JSONUtils;
+import dev.j3rzy.discord.commands.util.EmbedCommand;
+import dev.j3rzy.discord.events.*;
+import dev.j3rzy.discord.utils.JSONUtils;
 import net.dv8tion.jda.api.JDA;
 import net.dv8tion.jda.api.JDABuilder;
 import net.dv8tion.jda.api.OnlineStatus;
@@ -14,8 +14,8 @@ import net.dv8tion.jda.api.requests.GatewayIntent;
 import java.sql.SQLException;
 import java.util.Objects;
 
-import static dev.j3rzy.jujunonshq.utils.ConsoleUtils.log;
-import static dev.j3rzy.jujunonshq.utils.SQLUtils.checkForTables;
+import static dev.j3rzy.discord.utils.ConsoleUtils.log;
+import static dev.j3rzy.discord.utils.SQLUtils.checkForTables;
 
 public class JujunonsHQ {
     public static JDA jda;

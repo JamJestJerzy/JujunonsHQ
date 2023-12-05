@@ -1,6 +1,6 @@
-package dev.j3rzy.jujunonshq.objects;
+package dev.j3rzy.discord.objects;
 
-import dev.j3rzy.jujunonshq.JujunonsHQ;
+import dev.j3rzy.discord.JujunonsHQ;
 import net.dv8tion.jda.api.JDA;
 import net.dv8tion.jda.api.entities.Guild;
 import net.dv8tion.jda.api.entities.User;

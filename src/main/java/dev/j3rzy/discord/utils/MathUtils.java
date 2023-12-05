@@ -1,4 +1,4 @@
-package dev.j3rzy.jujunonshq.utils;
+package dev.j3rzy.discord.utils;
 
 public class MathUtils {
     public static String getSize(int bytes) {

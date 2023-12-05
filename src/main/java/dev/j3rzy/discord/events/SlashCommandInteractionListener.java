@@ -1,4 +1,4 @@
-package dev.j3rzy.jujunonshq.events;
+package dev.j3rzy.discord.events;
 
 import net.dv8tion.jda.api.events.interaction.command.SlashCommandInteractionEvent;
 import net.dv8tion.jda.api.hooks.ListenerAdapter;
@@ -7,7 +7,7 @@ import org.jetbrains.annotations.NotNull;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
-import static dev.j3rzy.jujunonshq.utils.ConsoleUtils.log;
+import static dev.j3rzy.discord.utils.ConsoleUtils.log;
 
 public class SlashCommandInteractionListener extends ListenerAdapter {
     @Override

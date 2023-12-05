@@ -1,18 +1,15 @@
-package dev.j3rzy.jujunonshq.events;
+package dev.j3rzy.discord.events;
 
-import dev.j3rzy.jujunonshq.objects.CMessage;
-import dev.j3rzy.jujunonshq.utils.JSONUtils;
-import net.dv8tion.jda.api.entities.Message;
-import net.dv8tion.jda.api.entities.User;
-import net.dv8tion.jda.api.entities.channel.concrete.TextChannel;
+import dev.j3rzy.discord.objects.CMessage;
+import dev.j3rzy.discord.utils.JSONUtils;
 import net.dv8tion.jda.api.events.message.MessageDeleteEvent;
 import net.dv8tion.jda.api.hooks.ListenerAdapter;
 import org.jetbrains.annotations.NotNull;
 
 import java.sql.SQLException;
 
-import static dev.j3rzy.jujunonshq.utils.ConsoleUtils.log;
-import static dev.j3rzy.jujunonshq.utils.SQLUtils.getMessage;
+import static dev.j3rzy.discord.utils.ConsoleUtils.log;
+import static dev.j3rzy.discord.utils.SQLUtils.getMessage;
 
 public class MessageDeleteListener extends ListenerAdapter {
     @Override

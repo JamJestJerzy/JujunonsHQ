@@ -1,4 +1,4 @@
-package dev.j3rzy.jujunonshq.utils;
+package dev.j3rzy.discord.utils;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -7,7 +7,7 @@ import java.lang.management.ManagementFactory;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
-import static dev.j3rzy.jujunonshq.utils.MathUtils.getSize;
+import static dev.j3rzy.discord.utils.MathUtils.getSize;
 
 public class ConsoleUtils {
     public static Logger log = LoggerFactory.getLogger("JujunonsHQ");
