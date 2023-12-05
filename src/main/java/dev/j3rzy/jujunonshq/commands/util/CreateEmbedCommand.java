@@ -1,4 +1,4 @@
-package dev.j3rzy.jujunonshq.commands;
+package dev.j3rzy.jujunonshq.commands.util;
 
 import com.google.gson.JsonParseException;
 import dev.j3rzy.jujunonshq.utils.JSONUtils;
@@ -13,6 +13,7 @@ import java.util.Objects;
 import java.util.concurrent.TimeUnit;
 
 import static dev.j3rzy.jujunonshq.utils.ConsoleUtils.log;
+import static dev.j3rzy.jujunonshq.utils.ConsoleUtils.replaceLast;
 
 public class CreateEmbedCommand extends ListenerAdapter {
     @Override
@@ -26,7 +27,7 @@ public class CreateEmbedCommand extends ListenerAdapter {
             MessageEmbed emb = JSONUtils.getEmbedFromJSON(event.getOption("json").getAsString());
             event.getHook().sendMessage("").addEmbeds(emb).queue();
         } catch (JsonParseException | IllegalStateException | NumberFormatException e) {
-            String error = e.getMessage()/*.replaceFirst("^.*: U", "U")*/.replaceFirst(".at.*$", "");
+            String error = replaceLast(e.getMessage(), ".at.*$", "");
             MessageEmbed emb = new EmbedBuilder().setColor(Color.RED).setTitle(error).build();
             event.getHook().sendMessage("").addEmbeds(emb).queue(message -> {
                 message.delete().queueAfter(10, TimeUnit.SECONDS);

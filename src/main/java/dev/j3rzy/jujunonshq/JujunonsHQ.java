@@ -1,6 +1,6 @@
 package dev.j3rzy.jujunonshq;
 
-import dev.j3rzy.jujunonshq.commands.CreateEmbedCommand;
+import dev.j3rzy.jujunonshq.commands.util.CreateEmbedCommand;
 import dev.j3rzy.jujunonshq.events.*;
 import dev.j3rzy.jujunonshq.utils.JSONUtils;
 import net.dv8tion.jda.api.JDA;
