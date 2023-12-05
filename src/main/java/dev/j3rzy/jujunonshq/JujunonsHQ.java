@@ -47,7 +47,7 @@ public class JujunonsHQ {
         /* -------- [ Commands ] -------- */
         jda.updateCommands().addCommands(
             Commands.slash("embed", "Creates embed from provided JSON")
-                .addOption(OptionType.STRING, "json", "JSON to make embed of", true),
+                .addOption(OptionType.STRING, "json", "JSON to make embed of", true)
         ).queue();
         /* -------- [ Commands ] -------- */
 
