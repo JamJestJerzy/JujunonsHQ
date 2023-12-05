@@ -17,7 +17,7 @@ apply plugin: 'com.github.johnrengelman.shadow'
 apply plugin: 'java'
 
 group = 'dev.j3rzy'
-version = '1.1.2'
+version = '1.2.0'
 
 repositories {
     mavenCentral()
