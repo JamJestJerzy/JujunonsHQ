@@ -16,7 +16,6 @@ public class MessageReactionAddListener extends ListenerAdapter {
         Message message = event.retrieveMessage().complete();
         MessageReaction reaction = event.getReaction();
 
-        /* If emoji is "❌" */
         if (Objects.equals(reaction.getEmoji().toString(), "UnicodeEmoji(codepoints=U+274c)")) {
             Message.Interaction interaction = message.getInteraction();
 
