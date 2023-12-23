@@ -46,17 +46,7 @@ public class JujunonsHQ {
         jda = builder.build();
 
         /* -------- [ Commands ] -------- */
-        Collection<CommandData> commands = new ArrayList<>();
-        for (SlashCommand slashCommand : SlashCommandManager.INSTANCE.getCommands()) {
-            SlashCommandData command = Commands.slash(slashCommand.getName(), slashCommand.getDescription());
-            if (slashCommand.haveOptions()) {
-                for (SlashCommandOption option : slashCommand.getOptions()) {
-                    command.addOption(option.getType(), option.getName(), option.getDescription(), option.isRequired(), option.isAutoComplete());
-                }
-            }
-            commands.add(command);
-        }
-        jda.updateCommands().addCommands(commands).queue();
+        jda.updateCommands().addCommands(SlashCommandManager.INSTANCE.getSlashCommands()).queue();
         /* -------- [ Commands ] -------- */
 
 

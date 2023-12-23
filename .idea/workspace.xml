@@ -4,7 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2cb5ee1f-43cb-4c4d-928b-e9d004df2cf1" name="Changes" comment="" />
+    <list default="true" id="2cb5ee1f-43cb-4c4d-928b-e9d004df2cf1" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/dev/j3rzy/discord/commands/SlashCommandI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/j3rzy/discord/JujunonsHQ.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/j3rzy/discord/JujunonsHQ.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/j3rzy/discord/commands/SlashCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/j3rzy/discord/commands/SlashCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/j3rzy/discord/commands/SlashCommandManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/j3rzy/discord/commands/SlashCommandManager.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -34,6 +40,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -124,6 +131,11 @@
       <workItem from="1701686494492" duration="7632000" />
       <workItem from="1701695305481" duration="1395000" />
       <workItem from="1701772593628" duration="6453000" />
+      <workItem from="1701811262116" duration="270000" />
+      <workItem from="1701956481808" duration="153000" />
+      <workItem from="1702149017006" duration="719000" />
+      <workItem from="1702211344705" duration="73000" />
+      <workItem from="1703349384118" duration="2843000" />
     </task>
     <servers />
   </component>

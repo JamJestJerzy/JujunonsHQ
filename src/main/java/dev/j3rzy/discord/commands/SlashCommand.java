@@ -1,6 +1,8 @@
 package dev.j3rzy.discord.commands;
 
 import net.dv8tion.jda.api.events.interaction.command.SlashCommandInteractionEvent;
+import net.dv8tion.jda.api.interactions.commands.build.Commands;
+import net.dv8tion.jda.api.interactions.commands.build.SlashCommandData;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -53,5 +55,13 @@ public abstract class SlashCommand {
 
     public List<SlashCommandOption> getOptions() {
         return options;
+    }
+
+    public SlashCommandData getSlashCommand() {
+        SlashCommandData command = Commands.slash(name, description);
+        if (haveOptions())
+            for (SlashCommandOption option : options)
+                command.addOption(option.getType(), option.getName(), option.getDescription(), option.isRequired(), option.isAutoComplete());
+        return command;
     }
 }

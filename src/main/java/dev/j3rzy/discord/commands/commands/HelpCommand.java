@@ -27,7 +27,7 @@ public class HelpCommand extends SlashCommand {
                 options += "> " + option.getName() + ": " + option.getDescription() + "\n";
             }
             emb.addField(
-                '/' + slashCommand.getName(),
+                    '/' + slashCommand.getName(),
                     String.format(
                             "`%s`\n%s", slashCommand.getDescription(), options
                     ),
